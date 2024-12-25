@@ -67,6 +67,7 @@ jobs:
           name: '${{ steps.artifact.outputs.formattedTime }}'
           path: .next
           if-no-files-found: error
+          include-hidden-files: true
 
   complete:
     if: always()

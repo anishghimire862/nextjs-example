@@ -58,14 +58,14 @@ jobs:
 
       - name: Build app
         id: list
-        run: ls -alt .next
+        run: ls -alt
 
       - name: Upload artifact
         id: upload-artifact
         uses: actions/upload-artifact@v3
         with:
           name: '${{ steps.artifact.outputs.formattedTime }}'
-          path: ./.next
+          path: .next
           if-no-files-found: error
 
   complete:

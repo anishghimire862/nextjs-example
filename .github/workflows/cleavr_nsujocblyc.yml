@@ -58,7 +58,7 @@ jobs:
 
       - name: Build app
         id: list
-        run: ls -alt
+        run: ls -alt .next
 
       - name: Upload artifact
         id: upload-artifact

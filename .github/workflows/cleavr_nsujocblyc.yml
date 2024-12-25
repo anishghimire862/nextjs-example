@@ -56,6 +56,10 @@ jobs:
           format: YYYYMMDDHHmmss
           utcOffset: "+08:00"
 
+      - name: Build app
+        id: list
+        run: ls -alt
+
       - name: Upload artifact
         id: upload-artifact
         uses: actions/upload-artifact@v3

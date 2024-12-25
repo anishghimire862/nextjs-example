@@ -56,16 +56,16 @@ jobs:
           format: YYYYMMDDHHmmss
           utcOffset: "+08:00"
 
-      - name: Build app
+      - name: List .next dir
         id: list
-        run: ls -alt
+        run: ls -alt .next
 
       - name: Upload artifact
         id: upload-artifact
         uses: actions/upload-artifact@v3
         with:
           name: '${{ steps.artifact.outputs.formattedTime }}'
-          path: .next/**
+          path: .next
           if-no-files-found: error
 
   complete:
